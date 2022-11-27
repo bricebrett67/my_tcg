@@ -1,8 +1,4 @@
 import ModelFactory from './factory';
-import Deck from './deck';
-import Board from './board';
-import Hand from './hand';
-import Cemetary from './cemetary';
 import Pawn from './pawn';
 
 export default class Player extends Pawn {

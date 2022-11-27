@@ -5,7 +5,7 @@ export default class Hand {
     }
 
     addCard (card) {
-        if(this.card.lenght === this.limit) {
+        if(this.cards.lenght === this.limit) {
             return false;
         }
 
@@ -18,7 +18,7 @@ export default class Hand {
 
     removeCard (position) {
         
-        if(!isArray(this.cards)) {
+        if(!Array(this.cards)) {
             return false;
         }
         const card = this.cards.splice(position, 1);

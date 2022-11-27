@@ -1,13 +1,13 @@
 
 export default class Deck {
-    constructor (config) {
+    constructor(config) {
         this.cards = config.cards;
     }
 
-    shuffle () {
-        if(this.cards.length !== 0) {
-            for(let i = 0; i <= this.cards.length - 2; i++) {
-                let j = Math.floor(Math.random() * this.cards.length); // i <= j < array.length
+    shuffle() {
+        if (this.cards.length !== 0) {
+            for (let i = 0; i <= this.cards.length - 2; i++) {
+                let j = Math.floor(Math.random() * this.cards.length);
                 let temp = array[i];
                 array[i] = array[j];
                 array[j] = temp;
@@ -18,28 +18,24 @@ export default class Deck {
         }
     }
 
-    draw () {
-        if(this.cards.length !== 0){
+    draw() {
+        if (this.cards.length !== 0) {
             return this.cards.shift();
         } else {
             return false;
         }
     }
 
-    getCardsCount () {
-        if(this.cards.length !== 0){
-            return this.cards.length;
-        } else {
-            return false;
-        }
+    getCardsCount() {
+        return this.cards.length;
     }
 
     insertAt(card, position) {
-        if(this.cards.length === 0) {
+        if (this.cards.length === 0) {
             return false;
         }
 
-        if(position === undefined) {
+        if (position === undefined) {
             this.cards.splice(-1, 0, card);
             return true;
         } else {
